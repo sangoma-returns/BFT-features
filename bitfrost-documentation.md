@@ -229,6 +229,10 @@ The user must first deposit funds from an external wallet.
 - These funds are credited to the user's Bitfrost parent account
 - The parent account acts as the control layer for all exchange sub-accounts and governs balance allocation, trading permissions, and execution
 
+![https___files gitbook com_v0_b_gitbook-x-prod appspot com_o_spaces%2Fvha7vMBPD2xjgyDUGRDe%2Fuploads%2FepZWmES3aiPY4WMIVhw0%2FScreenshot%202026-01-17%20at%2010 31 58 png_alt=media token=6db3f6d8-6d29-46cc-a704-ed828de7730d](https://github.com/user-attachments/assets/a8989499-2cf0-4524-a71d-633ede382599)
+
+
+
 #### 1.1.2 Exchange Selection
 
 After the parent account is funded, the user must select a minimum of two exchanges on which sub-accounts will be created.
@@ -239,12 +243,18 @@ In the initial release, supported exchanges are:
 
 Each selected exchange will receive a dedicated sub-account linked to the parent account.
 
+![https___files gitbook com_v0_b_gitbook-x-prod appspot com_o_spaces%2Fvha7vMBPD2xjgyDUGRDe%2Fuploads%2FlIrPIt6oB838qEff6pZt%2FScreenshot%202026-01-17%20at%2010 35 30 png_alt=media token=af7d0658-fa58-4cbc-ac5d-f637089b08b1](https://github.com/user-attachments/assets/9933acbf-99a9-41ac-9a5a-57b3769c548f)
+
+
 #### 1.1.3 Capital Allocation
 
 The user specifies how the parent account balance is distributed across the selected exchanges.
 
 - For the initial release, the system applies a default allocation of 50 percent per exchange
 - This allocation can be modified by the user before confirmation
+
+![https___files gitbook com_v0_b_gitbook-x-prod appspot com_o_spaces%2Fvha7vMBPD2xjgyDUGRDe%2Fuploads%2FpYZRvOVnL5XfCsQlSsrE%2FScreenshot%202026-01-17%20at%2010 35 50 png_alt=media token=fd64fc48-4295-49f3-9936-e5cab4c761d4](https://github.com/user-attachments/assets/8fcc0104-5db1-43bd-96ce-f852a5e50094)
+
 
 #### 1.1.4 Sub-Account Initialization
 
@@ -267,6 +277,9 @@ All deposits are made in USDC on HyperEVM. Only deposits sent on this network an
 2. USDC is transferred on HyperEVM to the user's Bitfrost deposit address
 3. After on-chain confirmation, funds are credited to the Bitfrost parent account
 4. The parent account functions as the primary balance and control layer for all exchange sub-accounts
+
+![https___files gitbook com_v0_b_gitbook-x-prod appspot com_o_spaces%2Fvha7vMBPD2xjgyDUGRDe%2Fuploads%2Fm0L955VIPeWP39OC57oI%2FScreenshot%202026-01-17%20at%2010 36 40 png_alt=media token=10c00301-e516-4779-9d6c-55ac1198e384](https://github.com/user-attachments/assets/6a4a2943-eaf0-4505-b101-4faae2a4fd96)
+
 
 #### 1.2.3 Post Deposit Allocation
 
@@ -291,6 +304,9 @@ All withdrawals are made in USDC on HyperEVM. Only this network and asset are su
 1. The user transfers funds from one or more exchange sub-accounts to the Bitfrost parent account, if required
 2. The user submits a withdrawal request from the parent account to an external wallet
 3. USDC is sent on HyperEVM to the specified destination address
+
+![https___files gitbook com_v0_b_gitbook-x-prod appspot com_o_spaces%2Fvha7vMBPD2xjgyDUGRDe%2Fuploads%2FcxT3AdGQhNh4FskoxVuH%2FScreenshot%202026-01-17%20at%2010 37 10 png_alt=media token=dd15035c-e25a-464d-bd45-79cbb236444a](https://github.com/user-attachments/assets/e1fc19ab-342a-495b-93a3-2a9ac726e7e5)
+
 
 #### 1.3.4 Withdrawal Processing
 
@@ -319,6 +335,9 @@ All transfers are denominated in USDC.
 3. The transfer is submitted and processed internally
 4. The destination balance is updated once the transfer completes
 
+![https___files gitbook com_v0_b_gitbook-x-prod appspot com_o_spaces%2Fvha7vMBPD2xjgyDUGRDe%2Fuploads%2FMix1GwxQZ68vhQK8UYMD%2FScreenshot%202026-01-17%20at%2010 37 45 png_alt=media token=ae3c6a15-277e-4136-af73-b9e98aaef525](https://github.com/user-attachments/assets/89ebf1e9-b8e8-45f2-85f0-3af84ae9387e)
+
+
 #### 1.4.4 Transfer Constraints
 
 Only free and available capital may be transferred:
@@ -326,6 +345,9 @@ Only free and available capital may be transferred:
 - **On the Bitfrost side**: Transfers are limited to the available balance held in the Bitfrost vault
 - **On exchange sub-accounts**: Only capital that is not required for margin, open positions, or risk constraints may be transferred
 - Funds reserved for margin, maintenance requirements, or pending settlement are not transferable
+
+![https___files gitbook com_v0_b_gitbook-x-prod appspot com_o_spaces%2Fvha7vMBPD2xjgyDUGRDe%2Fuploads%2FBQPdeDsCAELKz116iW97%2FScreenshot%202026-01-17%20at%2010 38 07 png_alt=media token=0df1fe0a-2a48-4304-ad25-99033f6f1da4](https://github.com/user-attachments/assets/a11e7d7e-2ebc-4633-b270-c1d9f58890f0)
+
 
 #### 1.4.5 Use in Withdrawals
 
@@ -350,6 +372,9 @@ Funding rates are:
 - Presented as annualized percentage yields
 
 Users may switch between day, week, month, and year views to assess short-term and long-term funding dynamics.
+
+<img width="2980" height="1610" alt="https___files gitbook com_v0_b_gitbook-x-prod appspot com_o_spaces%2Fvha7vMBPD2xjgyDUGRDe%2Fuploads%2FzKgX02bjIhexfNyd2OBK%2FScreenshot%202026-01-25%20at%2013 40 57 png_alt=media token=a09eb79b-418e-4314-98e0-e104217307ed" src="https://github.com/user-attachments/assets/bbae0628-81b2-422f-84da-abbb9c6b4f3a" />
+
 
 #### 2.1.2 Data Aggregation
 
@@ -394,6 +419,10 @@ The Aggregator is designed to optimize execution quality by aggregating liquidit
 
 The Aggregator allows a user to submit a single trade instruction that may be executed across multiple exchanges and sub-accounts. The user defines the trade intent and constraints. Execution is then distributed across eligible exchanges according to the selected strategy and prevailing market conditions.
 
+<img width="2832" height="1408" alt="https___files gitbook com_v0_b_gitbook-x-prod appspot com_o_spaces%2Fvha7vMBPD2xjgyDUGRDe%2Fuploads%2FaRGTy2DKFIjqIXBK5mT8%2FScreenshot%202026-01-25%20at%2014 22 36 (1) png_alt=media token=04b31978-3f81-498e-ba90-8631d9c5f4cf" src="https://github.com/user-attachments/assets/bfaa1e83-a170-4eda-9346-155d64d96d1d" />
+
+<img width="2828" height="1408" alt="https___files gitbook com_v0_b_gitbook-x-prod appspot com_o_spaces%2Fvha7vMBPD2xjgyDUGRDe%2Fuploads%2F78Q3EIgoLnyXMggBL90m%2FScreenshot%202026-01-25%20at%2014 23 50 png_alt=media token=be3a536e-0fdd-4da6-a0f4-28fd5ff56b74" src="https://github.com/user-attachments/assets/3d0b39e6-f0eb-4fa4-8695-32c2e57b5abe" />
+
 #### 3.1.1 Market Context
 
 The main view displays real-time market data for the selected instrument, including:
@@ -419,7 +448,11 @@ These inputs define a single logical trade.
 
 Users may select one or more exchanges as execution venues. Selected exchanges are treated as eligible liquidity sources. Execution may be split across exchanges to improve fill quality, reduce slippage, and manage available depth.
 
-### 3.2 Execution Strategies
+
+![https___files gitbook com_v0_b_gitbook-x-prod appspot com_o_spaces%2Fvha7vMBPD2xjgyDUGRDe%2Fuploads%2FFMjeHwJEPGCfUcHK5ARQ%2FScreenshot%202026-01-25%20at%2014 24 28 png_alt=media token=423f388b-90af-4bd0-b924-e1355ec929ae](https://github.com/user-attachments/assets/fc1f0d8d-2c1a-4ebf-9e2b-6d7b157114eb)
+
+
+#### 3.1.3 Execution Strategies
 
 The Aggregator supports multiple execution strategies, each designed to optimize a specific objective.
 
@@ -429,6 +462,59 @@ Strategies determine:
 - How aggressively orders interact with the order book
 
 Only one strategy is active per trade.
+
+#### 3.1.4 Order Distribution
+
+During execution, the trade may be decomposed into multiple child orders.
+
+These orders may:
+* Execute in parallel across exchanges
+* Be staggered over time
+* Adjust sizing dynamically based on fills and market conditions
+
+Distribution remains within user defined limits and available balances.
+
+#### 3.1.5 Execution Parameters
+
+Users may configure execution behavior, including:
+* Limit price handling
+* Duration and timing
+* Pause and resume conditions
+* Scaling and exit rules
+
+Advanced settings allow further control without requiring manual order placement.
+
+#### 3.1.6 Monitoring and Controls
+
+While execution is active, the user may monitor:
+* Fill progress against the target
+* Average execution price
+* Exchange level contribution
+* Execution status
+
+Active executions may be paused or canceled.
+
+#### 3.1.7 Completion and History
+
+Once execution is complete, the trade is recorded in the account history.
+
+Execution details remain available for review and analysis and contribute to aggregated portfolio metrics.
+
+####  3.1.8 Scope and Constraints
+
+Aggregated execution is constrained by:
+* Available balances and margin requirements
+* Exchange specific limits
+* Selected execution parameters
+
+
+
+
+### 3.2 Strategies
+Execution strategies define how a trade is broken into orders and routed across selected exchanges. Each strategy optimizes for a different execution objective such as price, speed, or market impact.
+
+![https___files gitbook com_v0_b_gitbook-x-prod appspot com_o_spaces%2Fvha7vMBPD2xjgyDUGRDe%2Fuploads%2Fq8CmduLVJQS00wuCLzp1%2FScreenshot%202026-01-25%20at%2016 44 28 png_alt=media token=d3be30d1-b66d-42b8-a321-678df3a1b329](https://github.com/user-attachments/assets/b9891310-ec01-433e-b951-3493edd46db6)
+
 
 #### 3.2.1 Impact Minimization
 
@@ -499,6 +585,9 @@ Simple execution modes bypass advanced scheduling logic:
 
 Exit Conditions define automated rules for closing or reducing a position once predefined profit or loss thresholds are reached. These are optional and apply only to the trade or execution in which they are configured.
 
+![https___files gitbook com_v0_b_gitbook-x-prod appspot com_o_spaces%2Fvha7vMBPD2xjgyDUGRDe%2Fuploads%2Fh7uTXkEbBdYokX3zHXqL%2FScreenshot%202026-01-25%20at%2014 25 17 png_alt=media token=e8a54358-39d3-4031-bb53-ab5dd06342a1](https://github.com/user-attachments/assets/5280d0d4-c68b-4cb5-80af-bbf0ea3892d9)
+
+
 #### 3.3.1 Take Profit
 
 Take Profit specifies the level at which execution is triggered to lock in gains.
@@ -531,7 +620,7 @@ Urgency controls how aggressively exit orders are executed once triggered.
 #### 3.3.4 Scope and Behavior
 
 - Exit conditions are evaluated continuously while the trade is active
-- Once triggered, exit execution is handled independently of the original entry strategy
+- Once triggered, exit execution is handled independently of the original entry strategy.
 
 ### 3.4 Scale Orders
 
@@ -540,6 +629,9 @@ Scale Orders allow a single trade to be split into multiple orders distributed a
 This feature is used to improve execution quality by spreading orders over price and size rather than executing at a single level. When Scale Orders are enabled, the target quantity is divided into multiple child orders. Each order is placed at a different price within the specified range and may have a different size depending on configuration.
 
 Scale Orders may be used with supported execution strategies.
+
+![https___files gitbook com_v0_b_gitbook-x-prod appspot com_o_spaces%2Fvha7vMBPD2xjgyDUGRDe%2Fuploads%2FLJq8BS4Fi75m9lPpze58%2FScreenshot%202026-01-25%20at%2014 25 37 png_alt=media token=b6a37e81-4fe9-4f20-a4ec-a06777feebca](https://github.com/user-attachments/assets/41ae9a1b-1c37-44f8-9c2a-a8f9755090f8)
+
 
 #### 3.4.1 Price Range
 
@@ -600,6 +692,9 @@ Trajectory defines the execution path used to distribute orders over time.
 
 Participation controls apply only to strategies that support volume-based execution.
 
+<img width="321" height="780" alt="Screenshot 2026-01-29 at 12 03 32" src="https://github.com/user-attachments/assets/3ec97140-dbb6-4be1-93a6-8d5a7931a7f5" />
+
+
 #### 3.5.3 Strategy Parameters
 
 - **Passiveness**: Controls how aggressively orders interact with the order book. Higher values favor resting orders and lower fees. Lower values favor faster execution.
@@ -638,6 +733,9 @@ Saving a template captures the current configuration, including:
 
 The user assigns a template name and saves it for later use.
 
+<img width="3834" height="1812" alt="https___files gitbook com_v0_b_gitbook-x-prod appspot com_o_spaces%2Fvha7vMBPD2xjgyDUGRDe%2Fuploads%2FYlB907kGgqFrlvPDAZvB%2FScreenshot%202026-01-25%20at%2014 40 53 png_alt=media token=c1441566-1455-4423-b041-d9784775c97c" src="https://github.com/user-attachments/assets/a35af3c9-0f8d-4373-af2e-d2fc807f411c" />
+
+
 #### 3.6.2 Load Template
 
 Selecting Load Template displays saved templates.
@@ -648,6 +746,9 @@ Each template entry summarizes key configuration details, including:
 - Strategy selection
 
 Loading a template applies the saved configuration to the current trade ticket. Templates update inputs and parameters only. They do not submit orders automatically.
+
+<img width="3830" height="1812" alt="https___files gitbook com_v0_b_gitbook-x-prod appspot com_o_spaces%2Fvha7vMBPD2xjgyDUGRDe%2Fuploads%2FB9vJ3j9Rp8ByH5ehyVvz%2FScreenshot%202026-01-25%20at%2014 44 57 png_alt=media token=f9f738ed-d4e5-4581-82bf-1856fb2cd165" src="https://github.com/user-attachments/assets/083f4fa2-c32e-4f08-bea2-22aaef87a21b" />
+
 
 #### 3.6.3 Manage Templates
 
@@ -672,6 +773,9 @@ A market making strategy continuously places bid and ask orders around the preva
 It is designed to provide continuous liquidity while managing spread placement, inventory exposure, and execution cadence within defined risk constraints.
 
 Orders are refreshed at a configurable interval to maintain competitiveness in the order book while adapting to price movements and inventory imbalance. Each strategy operates independently and contributes to the aggregated portfolio and account metrics.
+
+<img width="879" height="555" alt="Screenshot 2026-01-29 at 12 06 25" src="https://github.com/user-attachments/assets/81838c20-9bf7-4c5e-81f1-fd1803baffec" />
+
 
 #### 4.1.2 Basic Configuration
 
@@ -748,6 +852,9 @@ Each vault represents an independent market making strategy operated by a specif
 
 Users interact with vaults only through capital allocation and do not require specialized knowledge of market making mechanics.
 
+<img width="3834" height="1812" alt="https___files gitbook com_v0_b_gitbook-x-prod appspot com_o_spaces%2Fvha7vMBPD2xjgyDUGRDe%2Fuploads%2FxNnvQYfBk3Esc3zvRzvI%2FScreenshot%202026-01-25%20at%2014 52 09 png_alt=media token=093c424a-56c9-4d40-b1db-406adceb52f3" src="https://github.com/user-attachments/assets/9e4511bb-cb28-40cb-9753-ba8090fcd67b" />
+
+
 #### 4.2.2 Vault Access and Operators
 
 Vaults are created and operated by verified participants.
@@ -807,6 +914,9 @@ All configured strategies are executed concurrently once deployed.
 
 In addition to individual strategy views, users can monitor the combined behavior of all strategies as a single aggregated strategy.
 
+<img width="879" height="623" alt="Screenshot 2026-01-29 at 12 08 22" src="https://github.com/user-attachments/assets/445eb0d9-0281-491f-8db1-badf74987068" />
+
+
 #### 4.3.2 Strategy Configuration
 
 Each strategy is defined independently and includes:
@@ -818,6 +928,9 @@ Each strategy is defined independently and includes:
 - **Risk Controls**: Stop loss, take profit, participation rate, and auto repeat parameters
 
 Each strategy executes independently and contributes its own exposure and PnL to the overall strategy.
+
+
+<img width="3836" height="1814" alt="https___files gitbook com_v0_b_gitbook-x-prod appspot com_o_spaces%2Fvha7vMBPD2xjgyDUGRDe%2Fuploads%2FvycDsU5HGftrdjkoCgrV%2FScreenshot%202026-01-25%20at%2014 58 25 png_alt=media token=fc601898-e9de-411a-9e1a-3bc9e70ff1af" src="https://github.com/user-attachments/assets/ca36d69b-0a8f-4486-99cb-cc3445590c72" />
 
 #### 4.3.3 Strategy Aggregation and Global View
 
@@ -854,6 +967,9 @@ Users may:
 
 A strategy must be fully configured before it can be deployed.
 
+<img width="3838" height="1812" alt="https___files gitbook com_v0_b_gitbook-x-prod appspot com_o_spaces%2Fvha7vMBPD2xjgyDUGRDe%2Fuploads%2FGmKclAdA8m9k8pof5Zvd%2FScreenshot%202026-01-25%20at%2015 06 22 png_alt=media token=7787a509-e391-4645-832a-4341550738b0" src="https://github.com/user-attachments/assets/9c056c4c-7642-4a67-ac80-7963560c9fad" />
+
+
 #### 4.3.6 Simulation
 
 Before deployment, users may run a multi-strategy simulation.
@@ -869,6 +985,9 @@ The simulation provides projected performance metrics based on the previous 7 da
 
 Simulation results are indicative and based on historical data and current market conditions.
 
+<img width="3834" height="1810" alt="https___files gitbook com_v0_b_gitbook-x-prod appspot com_o_spaces%2Fvha7vMBPD2xjgyDUGRDe%2Fuploads%2F9dQzYoojg4KqEEY9DICu%2FScreenshot%202026-01-25%20at%2014 58 57 png_alt=media token=04b2f275-ab71-4cbf-a82c-40d07cc8f1c9" src="https://github.com/user-attachments/assets/5ec21fbf-19ae-474c-bbc9-f605e175e43b" />
+
+
 #### 4.3.7 Deployment
 
 Once configured, all strategies are deployed simultaneously.
@@ -880,6 +999,9 @@ A confirmation step summarizes:
 - Per-strategy capital and leverage
 
 Upon confirmation, each strategy begins execution immediately on its respective exchange.
+
+<img width="3830" height="1810" alt="new" src="https://github.com/user-attachments/assets/a0735f95-9e09-4b72-8cff-8fa88ce9cf83" />
+
 
 #### 4.3.8 Execution and Risk Scope
 
@@ -903,6 +1025,9 @@ For each exchange, users can see:
 - Program status: active, concluded, or unavailable
 
 This allows users to monitor incentive accumulation without needing to log into each exchange individually.
+
+
+<img width="3832" height="1810" alt="https___files gitbook com_v0_b_gitbook-x-prod appspot com_o_spaces%2Fvha7vMBPD2xjgyDUGRDe%2Fuploads%2FNnOoAY6yA9d2o9svP8d5%2FScreenshot%202026-01-25%20at%2014 59 50 png_alt=media token=39eec513-db96-4a0e-845e-628304f61410" src="https://github.com/user-attachments/assets/21b6b498-faca-4195-9c47-b58ac9d9003a" />
 
 #### 4.4.2 Supported Exchanges
 
@@ -942,6 +1067,69 @@ All points data is informational and reflects exchange-reported metrics.
 ---
 
 ## 5. ENTERPRISE MARKET MAKERS
+Enterprise Access enables permissioned use of advanced Bitfrost functionality intended for professional, institutional operators, and approved strategy operators.
+
+### Overview
+Enterprise Access provides controlled entry to advanced execution, analytics, and capital management capabilities.
+
+It is designed for users who require deeper configurability, operational oversight, and extended product surface area beyond standard trading workflows.
+Enterprise Access expands tooling and visibility.
+
+It does not alter exchange rules, execution priority, or liquidation mechanics.
+
+<img width="3832" height="1808" alt="https___files gitbook com_v0_b_gitbook-x-prod appspot com_o_spaces%2Fvha7vMBPD2xjgyDUGRDe%2Fuploads%2Fj75lgv8VwdfqhSSG6SXJ%2FScreenshot%202026-01-25%20at%2015 00 15 png_alt=media token=fb62a150-80b1-48cc-b4b8-ba3b09d63f57" src="https://github.com/user-attachments/assets/3a4e2051-b362-4ddf-a46d-6aa2a3768aa2" />
+
+
+### Access Control
+Enterprise features are gated behind an access verification process.
+
+To enable Enterprise Access, the user must either:
+- Enter a valid enterprise access code
+- Submit a request for approval through Bitfrost
+Until access is granted, enterprise functionality remains locked and inaccessible.
+
+<img width="3834" height="1814" alt="https___files gitbook com_v0_b_gitbook-x-prod appspot com_o_spaces%2Fvha7vMBPD2xjgyDUGRDe%2Fuploads%2FGI1xjgsY22cuTW8dJjm9%2FScreenshot%202026-01-25%20at%2015 00 41 png_alt=media token=f12c38b5-6f43-40fb-9682-ff7ac60b4620" src="https://github.com/user-attachments/assets/6c745a85-03b7-49fa-b658-ae9fbcc9c3ab" />
+
+
+### Advanced Analytics
+Enterprise users gain access to enhanced analytics and reporting functionality.
+
+This includes:
+- Strategy level performance analysis
+- Account level and exchange level aggregation
+- Risk metrics including drawdown and exposure concentration
+- Custom reporting views for operational and compliance use
+Analytics are read only and do not modify execution behavior.
+
+### Custom Strategies
+Enterprise Access allows deployment of custom trading strategies beyond predefined templates.
+Users may:
+- Upload custom strategy configurations
+- Define bespoke execution logic and parameters
+- Configure advanced risk controls and constraints
+Custom strategies are intended for experienced operators and may be subject to additional review or platform limits.
+
+### Vault Creation
+Enterprise users may be authorized to create market making vaults.
+
+Vault creators deploy proprietary strategies using pooled user capital.
+
+Users depositing into vaults receive proportional PnL based on vault performance.
+
+Vault participants do not require knowledge of the underlying strategy and cannot view internal execution logic.
+
+Vault creation is permissioned and not available to standard users.
+
+Vault strategies remain proprietary and private.
+
+### Vault Management
+Enterprise Access enables full vault management functionality.
+Approved users may:
+- Monitor vault level performance and PnL
+- Manage user deposits and withdrawals
+- Track proportional user allocations over time
+Vault management permissions are restricted to verified vault operators.
+
 
 ### 5.1 Custom Strategies
 
@@ -959,6 +1147,9 @@ Bitfrost acts as:
 - A risk-constrained deployment environment
 
 This enables deployment across multiple exchanges without exposing intellectual property or internal logic.
+
+<img width="3834" height="1812" alt="https___files gitbook com_v0_b_gitbook-x-prod appspot com_o_spaces%2Fvha7vMBPD2xjgyDUGRDe%2Fuploads%2FitWDD5mp8h2V5jN9ma44%2FScreenshot%202026-01-25%20at%2015 01 28 png_alt=media token=8dcd9955-3ad5-4152-a760-30d215152114" src="https://github.com/user-attachments/assets/d059f86b-2b9e-4bbf-9af4-42b21567c5c9" />
+
 
 #### 5.1.2 Execution Model
 
@@ -1034,6 +1225,9 @@ Vault Creation enables approved market makers to create capital pools that aggre
 
 A vault allows a verified market maker to deploy deposited user capital into their own market making strategies. The vault creator controls execution and risk. Users participate passively and receive a proportional share of the vault's performance. Underlying strategy logic is not visible to depositors.
 
+<img width="3832" height="1810" alt="https___files gitbook com_v0_b_gitbook-x-prod appspot com_o_spaces%2Fvha7vMBPD2xjgyDUGRDe%2Fuploads%2Fv8Y1NG2xM9XxFtgFDT5D%2FScreenshot%202026-01-25%20at%2015 02 46 png_alt=media token=9c421845-23db-4296-a946-fa68fb98e7f4" src="https://github.com/user-attachments/assets/fae2dc24-f7b0-4569-b5ae-4a2d49ce295c" />
+
+
 #### 5.2.2 Minimum Initial Deposit
 
 The vault creator must deposit a minimum of 100 USDC to initialize the vault.
@@ -1095,6 +1289,9 @@ Vault management governs the ongoing operation of an active market making vault 
 This interface allows the vault creator to monitor performance, manage required capital commitments, and claim earned fees, while maintaining alignment with depositor capital.
 
 All actions taken here affect only the vault creator's capital and permissions. Depositor funds remain segregated and governed by vault rules.
+
+<img width="879" height="755" alt="Screenshot 2026-01-29 at 12 22 30" src="https://github.com/user-attachments/assets/aa03f0c4-2a2f-4466-8b82-617342f18add" />
+
 
 #### 5.3.2 Vault State
 
@@ -1162,6 +1359,9 @@ Bitfrost does not impose a proprietary trading strategy. Instead, the product en
 
 Users may optionally introduce controlled directional exposure through configurable parameters, allowing the strategy to range from pure arbitrage to partially directional positioning based on user preference.
 
+![https___files gitbook com_v0_b_gitbook-x-prod appspot com_o_spaces%2Fvha7vMBPD2xjgyDUGRDe%2Fuploads%2F5oQYKgfQKQZJvXbj7gcB%2FScreenshot%202026-01-25%20at%2013 50 09 png_alt=media token=03eb7166-8e19-4f7c-9f83-e60b2cc54d54](https://github.com/user-attachments/assets/b7875290-0f91-4bdf-b1f0-702bbc32b946)
+
+
 #### 6.1.2 Strategy Overview
 
 A funding rate arbitrage trade consists of two linked positions:
@@ -1188,6 +1388,9 @@ The system calculates:
 - Funding paid on the short position
 
 These values are netted to produce the gross funding rate return. The headline value displayed at the top of the interface represents the gross funding rate received, defined as funding earned minus funding paid.
+
+<img width="2676" height="1412" alt="https___files gitbook com_v0_b_gitbook-x-prod appspot com_o_spaces%2Fvha7vMBPD2xjgyDUGRDe%2Fuploads%2F6isCapdfHstYzHrRByvC%2FScreenshot%202026-01-25%20at%2013 53 41 png_alt=media token=d376ab38-1f83-49a4-b0ab-889adefeaa52" src="https://github.com/user-attachments/assets/2203838b-3a7e-465d-8511-3e79c513fdf8" />
+
 
 #### 6.1.5 Funding PnL Time Series
 
@@ -1245,6 +1448,9 @@ Before activation, the user selects:
 
 These inputs define the operating bounds of the bot.
 
+<img width="2676" height="1390" alt="https___files gitbook com_v0_b_gitbook-x-prod appspot com_o_spaces%2Fvha7vMBPD2xjgyDUGRDe%2Fuploads%2FU1B3SKVDhTvbQsghXM2S%2FScreenshot%202026-01-25%20at%2013 54 52 png_alt=media token=1425972e-ddca-4161-b7df-ceaf019d3c92" src="https://github.com/user-attachments/assets/b1c284ef-2d4d-4c0c-8859-f87757ce65ba" />
+
+
 #### 6.2.3 Position and Exposure Management
 
 The bot enforces directional neutrality at all times. Positions are rebalanced automatically to maintain matched long and short exposure within defined tolerances.
@@ -1278,6 +1484,9 @@ Specifically:
 - **Directional Bias** represents net directional exposure aggregated across all positions
 
 These values reflect the global state of the user's Bitfrost account.
+
+<img width="2978" height="1614" alt="https___files gitbook com_v0_b_gitbook-x-prod appspot com_o_spaces%2Fvha7vMBPD2xjgyDUGRDe%2Fuploads%2F4d01M0KFY3y16fk6i6Pl%2FScreenshot%202026-01-25%20at%2015 37 14 png_alt=media token=ce412737-66a2-4775-8076-243f8be4e940" src="https://github.com/user-attachments/assets/f67261dc-b1d6-4ad4-8133-11970e95e8a4" />
+
 
 ### 7.2 Equity and Distribution
 
@@ -1333,6 +1542,10 @@ Selecting an exchange opens an exchange-specific view with detailed metrics scop
 
 This page also allows users to manage sub-account configuration by adding or removing exchange sub-accounts via Configure Accounts.
 
+
+<img width="938" height="682" alt="Screenshot 2026-01-29 at 12 26 28" src="https://github.com/user-attachments/assets/51e9848f-33fd-4999-93c7-af47f159636c" />
+
+
 ### 8.2 Exchange Detail View
 
 The exchange detail view provides a breakdown of the selected sub-account only.
@@ -1346,6 +1559,9 @@ It includes:
 All values in this view are isolated to the selected exchange and do not include balances or positions from other sub-accounts.
 
 ### 8.3 Adding an Exchange Account
+
+<img width="620" height="508" alt="Screenshot 2026-01-29 at 12 27 09" src="https://github.com/user-attachments/assets/6b8ce699-3b6b-4342-9cc0-3d109f9c9e9f" />
+
 
 To add a new exchange sub-account, the user opens Configure Accounts and enables the desired exchange.
 
@@ -1403,6 +1619,9 @@ Orders may be filtered by status, including:
 
 Additional filters allow grouping by execution type.
 
+<img width="1068" height="794" alt="Screenshot 2026-01-29 at 12 28 00" src="https://github.com/user-attachments/assets/0790dbc2-79d1-4d16-ab66-eff8800dec5e" />
+
+
 ### 9.3 Displayed Fields
 
 For each execution, the following fields are shown:
@@ -1432,6 +1651,9 @@ Market Maker Management provides a consolidated, account-level view of all activ
 Market Maker Management provides a unified supervisory view over all market making activity executed within the account.
 
 This includes standalone strategies, vault-based strategies, and multi-strategy portfolios that aggregate multiple independent strategies across venues. All execution remains strategy-scoped while monitoring and analysis are performed at the account level.
+
+<img width="976" height="796" alt="Screenshot 2026-01-29 at 12 29 02" src="https://github.com/user-attachments/assets/6f7a27cd-3de4-4495-9a85-d67f04f0629a" />
+
 
 ### 10.2 Strategy Types
 
@@ -1508,6 +1730,8 @@ The Execution summary provides a complete, time-ordered record of fills, exposur
 
 Each execution represents a single submission and its resulting activity until completion, cancellation, or pause.
 
+<img width="846" height="789" alt="Screenshot 2026-01-29 at 12 30 20" src="https://github.com/user-attachments/assets/83c64f46-0b59-403d-b441-0e399c401905" />
+
 #### 11.1.2 Execution Configuration
 
 The execution configuration reflects the parameters defined at submission time and remains fixed for the lifetime of the execution.
@@ -1581,6 +1805,9 @@ The Status view describes the state of an active or completed funding rate arbit
 
 It provides a consolidated view of the position configuration, current exposure, and performance metrics.
 
+<img width="984" height="808" alt="Screenshot 2026-01-29 at 12 31 46" src="https://github.com/user-attachments/assets/29f2cbeb-46a1-431b-aff6-557f1d14dcdf" />
+
+
 #### 11.2.2 Position State
 
 The status view reports the current state of the position.
@@ -1646,6 +1873,10 @@ The Market Making Strategy Monitor provides detailed execution, performance, and
 For multi-strategy portfolios, the monitor exposes both aggregated portfolio behaviour and granular analytics for each underlying sub-strategy operating across multiple exchanges and instruments.
 
 Advanced strategies and vault strategies expose aggregated analytics only and do not include sub-strategy level decomposition as these do not exist.
+
+
+<img width="548" height="778" alt="Screenshot 2026-01-29 at 12 32 23" src="https://github.com/user-attachments/assets/0bcb631c-e938-403f-a6aa-3c4ff6ae1ae9" />
+
 
 #### 11.3.2 Summary Metrics
 
@@ -1786,6 +2017,9 @@ Each record represents a discrete system action initiated by an account, strateg
 
 The explorer supports operational monitoring, reconciliation, and post-trade analysis.
 
+<img width="878" height="463" alt="Screenshot 2026-01-29 at 12 33 29" src="https://github.com/user-attachments/assets/ab45f4df-8962-4172-96f2-272c572d661d" />
+
+
 #### 12.1.2 Search and Filtering
 
 The search interface allows querying by transaction hash, action type, or account identifier.
@@ -1816,5 +2050,3 @@ Transactions may exist in one of the following states:
 Status is updated in real-time as transactions progress through the system.
 
 ---
-
-*End of Documentation*
