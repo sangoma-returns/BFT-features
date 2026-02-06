@@ -2020,23 +2020,19 @@ This section is used to confirm strategy health and operational continuity.
 
 
 
-Below is **Section 12 RWAs**, formatted to match your existing doc style.
 
-Headings are bold only
-No separators
-Clean copy paste
-Numbered consistently
-No dashes used anywhere
 
 ---
 
-**12. RWAs**
+## 12. RWAs
 
-**12.1 Exchanges**
+### 12.1 Exchanges
 
 Bitfrost provides access to real world asset perpetual markets through Hyperliquid HIP3 venues.
 
-**12.1.1 RWA Market Overview**
+
+
+#### 12.1.1 RWA Market Overview
 
 These markets extend perpetual trading beyond crypto native assets to include commodities, equities, equity indices, FX pairs, and thematic baskets.
 
@@ -2046,55 +2042,183 @@ Markets are venue specific.
 
 Each venue defines its own asset universe, margin denomination, and maximum leverage.
 
-Supported HIP3 venues include
-XYZ
-FLX
-KM
-VNTL
-CASH
-HYNA
+
+
+#### Supported HIP3 venues include
+- XYZ
+- FLX
+- KM
+- VNTL
+- CASH
+- HYNA
 
 RWA instruments are margined and quoted in stable assets specific to each venue such as USDC, USDH, USDT, or USDE.
 
 Leverage limits are enforced at the market level and vary by asset type and venue.
 
-Execution across RWA markets supports the full Bitfrost feature set including
-Multi venue aggregation
-Advanced execution strategies
-Market making and inventory management
-Vault based capital deployment
-Multi strategy coordination and monitoring
-Funding rate arbitrage and carry trade strategies
+
+
+#### Execution across RWA markets supports the full Bitfrost feature set including
+- Multi venue aggregation
+- Advanced execution strategies
+- Market making and inventory management
+- Vault based capital deployment
+- Multi strategy coordination and monitoring
+- Funding rate arbitrage and carry trade strategies
 
 Risk management is applied consistently across RWA and crypto markets.
 
 Margin usage, exposure, and PnL are tracked at both the strategy level and the account level.
 
-**12.1.2 Venue Documentation**
+#### 12.1.2 Venue Documentation
 
 **XYZ**
 Documentation [https://docs.trade.xyz/xyz-perps-specification/equity-perpetuals](https://docs.trade.xyz/xyz-perps-specification/equity-perpetuals)
-Supported markets as defined by the venue
+Supported markets
+| Market        | Max Leverage |
+| ------------- | ------------ |
+| SILVER USDC   | 20x          |
+| GOLD USDC     | 20x          |
+| COPPER USDC   | 20x          |
+| PLATINUM USDC | 20x          |
+| CL USDC       | 20x          |
+| XYZ100 USDC   | 25x          |
+| EUR USDC      | 50x          |
+| USDJPY USDC   | 50x          |
+| NATGAS USDC   | 10x          |
+| TSLA USDC     | 10x          |
+| NVDA USDC     | 10x          |
+| GOOGL USDC    | 10x          |
+| AAPL USDC     | 10x          |
+| AMZN USDC     | 10x          |
+| META USDC     | 10x          |
+| MSFT USDC     | 10x          |
+| INTC USDC     | 10x          |
+| PLTR USDC     | 10x          |
+| MSTR USDC     | 10x          |
+| COIN USDC     | 10x          |
+| HOOD USDC     | 10x          |
+| MU USDC       | 10x          |
+| ORCL USDC     | 10x          |
+| CRCL USDC     | 10x          |
+| URNM USDC     | 10x          |
+| RIVN USDC     | 10x          |
+| USAR USDC     | 10x          |
+| NFLX USDC     | 10x          |
+| BABA USDC     | 10x          |
+| CRWV USDC     | 10x          |
+| AMD USDC      | 10x          |
+
+
+
 
 **FLX**
 Documentation [https://usefelix.gitbook.io/perps](https://usefelix.gitbook.io/perps)
 Supported markets as defined by the venue
+| Market         | Max Leverage |
+| -------------- | ------------ |
+| SILVER USDH    | 20x          |
+| GOLD USDH      | 20x          |
+| PLATINUM USDH  | 20x          |
+| COPPER USDH    | 20x          |
+| PALLADIUM USDH | 20x          |
+| OIL USDH       | 15x          |
+| TSLA USDH      | 10x          |
+| NVDA USDH      | 10x          |
+| COIN USDH      | 10x          |
+| XMR USDH       | 10x          |
+| CRCL USDH      | 5x           |
+| BTC USDH       | 1x           |
+| GAS USDH       | 1x           |
+
 
 **VNTL**
 Documentation [https://docs.ventuals.com/overview/markets](https://docs.ventuals.com/overview/markets)
 Supported assets as defined by the venue
 
+| Market         | Max Leverage |
+| -------------- | ------------ |
+| MAG7 USDH      | 15x          |
+| SEMIS USDH     | 15x          |
+| ROBOT USDH     | 15x          |
+| INFOTECH USDH  | 15x          |
+| NUCLEAR USDH   | 15x          |
+| ANTHROPIC USDH | 3x           |
+| SPACEX USDH    | 3x           |
+| OPENAI USDH    | 3x           |
+| DEFENSE USDH   | 15x          |
+| ENERGY USDH    | 15x          |
+| BIOTECH USDH   | 15x          |
+
+
+
 **HYNA**
 Documentation [https://docs.hyena.trade](https://docs.hyena.trade)
 Supported assets as defined by the venue
+| Market        | Max Leverage |
+| ------------- | ------------ |
+| BTC USDE      | 40x          |
+| ETH USDE      | 25x          |
+| SOL USDE      | 20x          |
+| XRP USDE      | 20x          |
+| BNB USDE      | 10x          |
+| HYPE USDE     | 10x          |
+| LINK USDE     | 10x          |
+| DOGE USDE     | 10x          |
+| ADA USDE      | 10x          |
+| LTC USDE      | 10x          |
+| BCH USDE      | 10x          |
+| SUI USDE      | 10x          |
+| ENA USDE      | 10x          |
+| FARTCOIN USDE | 10x          |
+| PUMP USDE     | 10x          |
+| ZEC USDE      | 10x          |
+| XPL USDE      | 10x          |
+| XMR USDE      | 5x           |
+| LIGHTER USDE  | 5x           |
+| IP USDE       | 3x           |
+| LIT USDE      | 3x           |
+| 1000PEPE USDE | 10x          |
+
+
 
 **KM**
 Documentation [https://docs.markets.xyz](https://docs.markets.xyz)
 Supported assets as defined by the venue
+| Market         | Max Leverage |
+| -------------- | ------------ |
+| US500 USDH     | 25x          |
+| USTECH USDH    | 25x          |
+| GOLD USDH      | 25x          |
+| SILVER USDH    | 20x          |
+| SMALL2000 USDH | 20x          |
+| TSLA USDH      | 12x          |
+| USOIL USDH     | 10x          |
+| AAPL USDH      | 15x          |
+| GOOGL USDH     | 15x          |
+| BABA USDH      | 10x          |
+| USBOND USDH    | 10x          |
+| EUR USDH       | 50x          |
+| USENERGY USDH  | 10x          |
+
+
 
 **CASH**
 Documentation [https://docs.dreamcash.xyz](https://docs.dreamcash.xyz)
 Supported assets as defined by the venue
+| Market      | Max Leverage |
+| ----------- | ------------ |
+| USA500 USDT | 20x          |
+| NVDA USDT   | 20x          |
+| TSLA USDT   | 20x          |
+| GOOGL USDT  | 20x          |
+| INTC USDT   | 20x          |
+| AMZN USDT   | 20x          |
+| HOOD USDT   | 20x          |
+| META USDT   | 20x          |
+| MSFT USDT   | 20x          |
+
+
 
 **12.2 Aggregator**
 
@@ -2110,33 +2234,46 @@ Each venue maintains its own market listings, margin denomination, leverage sche
 
 For an understanding of Aggregator functionality, refer to the Aggregator section.
 
+<img width="1787" height="755" alt="Screenshot 2026-02-06 at 23 27 30" src="https://github.com/user-attachments/assets/f54ddfd6-7445-456b-8090-4ef4c0bb8c23" />
+
+
+
 **12.2.2 Asset Selection**
 
 RWA execution begins with explicit selection of an underlying asset.
 
 An asset represents the economic exposure and is independent of venue, quote asset, or margin denomination.
 
+<img width="814" height="776" alt="Screenshot 2026-02-06 at 23 27 51" src="https://github.com/user-attachments/assets/4fb94bbf-8042-4358-b42c-6eaf0808af62" />
+
 Once an asset is selected, the Aggregator identifies all markets referencing that asset across supported venues.
 
 Asset selection defines the universe of candidate markets but does not determine execution scope.
+
+
+
 
 **12.2.3 Venue Selection**
 
 Execution scope is defined by explicit venue selection.
 
 Only venues selected by the user are eligible for execution.
+<img width="434" height="466" alt="Screenshot 2026-02-06 at 23 28 49" src="https://github.com/user-attachments/assets/a15ba057-2d60-45f6-b830-8f466dbd822e" />
+
 
 Each selected venue represents an eligible execution surface for the underlying asset.
 
 A single Aggregator execution may span multiple venues simultaneously.
 
 Venue selection defines
-Eligible markets
-Eligible leverage ranges
-Eligible margin assets
-Eligible liquidity pools
+- Eligible markets
+- Eligible leverage ranges
+- Eligible margin assets
+- Eligible liquidity pools
 
 Venues that do not satisfy user defined execution constraints are excluded from execution.
+
+
 
 **12.2.4 Underlying Asset Normalization**
 
@@ -2145,14 +2282,16 @@ Execution intent is defined at the underlying asset level.
 Markets referencing the same underlying asset may participate in a single execution intent even when quote or margin assets differ.
 
 Example
-Silver quoted in USDC on one venue
-Silver quoted in USDH on another venue
+- Silver quoted in USDC on one venue
+- Silver quoted in USDH on another venue
 
 Both markets may be included within the same Aggregator execution scope when they reference the same underlying asset.
 
 Settlement, margin usage, and funding remain attributed to each venue.
 
 Execution intent is preserved at the asset level while accounting remains venue specific.
+
+
 
 **12.2.5 Quote Asset Independence**
 
@@ -2161,6 +2300,8 @@ Markets referencing the same underlying asset may be quoted and margined using d
 Quote and margin differences do not affect asset eligibility.
 
 Funding, settlement, and margin accounting remain venue specific.
+
+
 
 **12.2.6 Margin Determination and Availability**
 
@@ -2172,50 +2313,68 @@ Margin availability is evaluated independently per venue prior to order submissi
 
 The Aggregator may source margin across venues subject to account permissions, available balances, and internal settlement constraints.
 
+
+
 **12.2.7 Leverage Compatibility Enforcement**
 
 Maximum leverage is enforced at the venue and market level.
 
-When a user specifies a target leverage
-The Aggregator evaluates leverage limits across all selected venues
-Venues that do not support the specified leverage are excluded from execution
-Remaining venues participate normally
+When a user specifies a target leverage:
+- The Aggregator evaluates leverage limits across all selected venues
+- Venues that do not support the specified leverage are excluded from execution
+- Remaining venues participate normally
+
+For example:
+- If five venues are selected
+- Four venues support 50x leverage
+- One venue supports only 25x leverage
+
+The Aggregator will execute only across the four compatible venues.
 
 Execution is never resized to satisfy an incompatible venue.
+
+
 
 **12.2.8 Execution Scope Resolution**
 
 Final execution scope is resolved by intersecting
-Selected underlying asset
-Selected venues
-User specified leverage constraints
-Venue level market eligibility
-Venue level margin availability
+- Selected underlying asset
+- Selected venues
+- User specified leverage constraints
+- Venue level market eligibility
+- Venue level margin availability
 
 Only markets within this resolved scope receive execution.
 
 No implicit substitutions or relaxations are applied.
 
-**12.2.9 Portfolio and Accounting Integration**
+
+
+#### 12.2.9 Portfolio and Accounting Integration
 
 RWA positions executed through the Aggregator are tracked at both the asset level and the venue level.
 
-Asset level tracking aggregates
-Net exposure by underlying asset
-PnL contribution by underlying asset
-Directional exposure and bias
+Asset level tracking aggregates:
+- Net exposure by underlying asset
+- PnL contribution by underlying asset
+- Directional exposure and bias
 
-Venue level accounting preserves
-Margin denomination and usage
-Funding attribution
-Leverage attribution
-Settlement and execution provenance
+Venue level accounting preserves:
+- Margin denomination and usage
+- Funding attribution
+- Leverage attribution
+- Settlement and execution provenance
 
 This enables a unified asset view while maintaining venue accurate accounting and auditability.
 
-**12.3 Market Maker**
 
-**12.3.1 Overview**
+
+### 12.3 Market Maker
+Market making strategies support RWA markets using the same market making framework applied to other perpetual instruments, while enforcing venue specific constraints defined by Hyperliquid HIP3.
+
+
+
+#### 12.3.1 Overview
 
 This section defines behavior specific to market making on real world asset perpetual markets.
 
@@ -2226,63 +2385,96 @@ General market making mechanics, parameters, and lifecycle are defined in the Ma
 RWA markets are supported across all market making strategy types available on the platform.
 
 This includes
-Advanced market making strategies
-Vault based market making strategies
-Multi strategy market making deployments
+- Advanced market making strategies
+- Vault based market making strategies
+- Multi strategy market making deployments
 
 RWA support does not introduce a separate strategy class.
 
 RWA markets participate in the same strategy frameworks, parameter models, and risk controls as other markets.
+
+
 
 **12.3.3 Strategy Type Consistency**
 
 All market making strategy types operate on RWA markets using the same configuration structure.
 
 Support includes
-Single market deployments
-Multi strategy portfolios
-Vault deployed strategies with external capital participation
+- Single market deployments
+- Multi strategy portfolios
+- Vault deployed strategies with external capital participation
 
 RWA specific behavior is expressed through market characteristics such as leverage limits, funding dynamics, and liquidity profiles.
 
-**12.3.4 Exchange Selection**
+
+
+#### 12.3.4 Deployment Implications
+RWA markets may be selected wherever a market making strategy supports venue based asset selection.
+Strategy behavior remains deterministic and user defined.
+No strategy type implicitly enables or restricts RWA usage.
+Eligibility is determined solely by:
+- Selected exchange
+- Selected RWA market
+- Market level leverage and margin constraints
+
+<img width="1786" height="774" alt="Screenshot 2026-02-06 at 23 37 00" src="https://github.com/user-attachments/assets/d1642a07-7d8f-4f84-b53e-8afaec6a0645" />
+
+
+
+**12.3.5 Exchange Selection**
 
 RWA market making requires explicit exchange selection.
 
 Only one HIP3 venue may be selected per market making deployment.
 
 The selected exchange defines
-Available RWA markets
-Margin denomination
-Funding mechanics
-Leverage schedules by market
+- Available RWA markets
+- Margin denomination
+- Funding mechanics
+- Leverage schedules by market
+
+Market making execution is restricted to the selected exchange.
 
 Changing the exchange requires redeployment.
 
-Providing liquidity across multiple venues requires separate strategies.
+Providing liquidity on the same underlying asset across multiple venues requires separate strategies per venue and can be conducted under Multi-Strategy Market Making
 
-**12.3.5 Asset Selection and Leverage Determination**
+<img width="1699" height="793" alt="Screenshot 2026-02-06 at 23 38 09" src="https://github.com/user-attachments/assets/0b4c6e4f-65c3-4057-ae7b-c4b4703af1cb" />
+
+
+
+**12.3.6 Asset Selection and Leverage Determination**
 
 Asset selection is scoped to the selected exchange.
 
 Each RWA asset corresponds to a specific perpetual market listed on that exchange.
 
-Leverage is determined at the asset level and fixed by the market.
+Leverage is determined at the asset level.
+
+The maximum allowable leverage is defined by the selected asset on the selected exchange.
+
+By selecting an asset, the applicable leverage limits for that market are fixed.
 
 No leverage normalization or override is applied.
 
 Examples
-xyz SILVER PERP USDC supports up to 20x
-km SILVER PERP USDC supports up to 20x
-vntl MAG7 PERP USDH supports up to 15x
+- xyz SILVER PERP USDC supports up to 20x
+- km SILVER PERP USDC supports up to 20x
+- vntl MAG7 PERP USDH supports up to 15x
 
-**12.3.6 Execution Implications**
+Leverage availability may differ for the same underlying asset across exchanges.
+Only leverage supported by the selected asset may be used.
 
-Order sizing, inventory limits, and risk thresholds are constrained by asset level leverage.
 
-Constraints are enforced prior to order placement and continuously during execution.
+**12.3.7 Execution Implications**
 
-**12.3.7 Margin and Inventory Isolation**
+Order sizing, inventory limits, and risk thresholds are constrained by the asset level leverage.
+Market making behavior must operate within the leverage envelope of the selected asset.
+Leverage constraints are enforced prior to order placement and continuously during execution.
+
+
+
+**12.3.8 Margin and Inventory Isolation**
 
 Margin denomination is determined by venue selection.
 
@@ -2290,15 +2482,18 @@ Each RWA market making strategy maintains isolated margin and inventory on its s
 
 Inventory risk is venue specific.
 
-**12.3.8 Liquidity Characteristics**
+
+**12.3.9 Liquidity Characteristics**
 
 RWA order books typically exhibit lower depth, wider spreads, and less consistent liquidity than crypto native markets.
 
 Liquidity may be intermittent and asymmetric.
 
-These characteristics must be handled through strategy configuration.
+These characteristics are not normalized by the platform and must be handled through strategy configuration.
 
-**12.3.9 Inventory Persistence**
+
+
+**12.3.10 Inventory Persistence**
 
 Inventory may persist for longer durations due to lower turnover.
 
@@ -2308,7 +2503,9 @@ Inventory skew and exposure caps are critical.
 
 There is no implicit hedging or cross venue offsetting.
 
-**12.3.10 Funding Attribution**
+
+
+**12.3.11 Funding Attribution**
 
 Funding is defined per venue and per RWA market.
 
@@ -2316,7 +2513,9 @@ Funding impacts inventory carry cost and realized PnL.
 
 Funding does not affect quoting behavior.
 
-**12.3.11 Event Sensitivity**
+
+
+**12.3.12 Event Sensitivity**
 
 RWA markets are sensitive to market hours, macro events, and venue specific liquidity changes.
 
@@ -2324,35 +2523,48 @@ Strategies are not automatically paused.
 
 Risk management remains the responsibility of strategy configuration.
 
-**12.4 Funding Rate Arbitrage**
 
-**12.4.1 Overview**
+### 12.4 Funding Rate Arbitrage**
+This section defines behavior specific to funding rate arbitrage involving real world asset perpetual markets.
+
+#### 12.4.1 Overview**
 
 General funding rate arbitrage mechanics, parameters, and lifecycle are defined in the Funding Rate Arbitrage section.
 
-**12.4.2 Strategy Scope**
+
+#### 12.4.2 Strategy Scope**
 
 Funding rate arbitrage strategies may be constructed across
-Real world asset markets
-Crypto native asset markets
-Mixed RWA and crypto combinations
+- Real world asset markets
+- Crypto native asset markets
+- Mixed RWA and crypto combinations
 
 Strategies are not restricted to a single asset class.
 
-Directional exposure is user defined.
+<img width="1289" height="747" alt="Screenshot 2026-02-06 at 23 45 25" src="https://github.com/user-attachments/assets/78a14fe0-31e5-4ae9-b782-94327e638e2c" />
+
+Positions may reference different underlying assets when configured to do so.
+
+Directional exposure is defined by user configuration.
+
+
 
 **12.4.3 Asset Selection**
 
 Execution begins with explicit asset selection.
 
-Assets may include
-Real world assets
-Crypto assets
-Indices
-FX pairs
-Cross asset combinations
+Assets represent economic exposures and may include:
+- Real world assets
+- Crypto assets
+- Indices
+- FX pairs
+- Cross asset combinations
 
 Asset selection defines eligible instruments but does not require identical assets on each leg.
+
+<img width="1038" height="139" alt="Screenshot 2026-02-06 at 23 47 24" src="https://github.com/user-attachments/assets/bd6def7d-c0ca-4c5e-a7d4-851872b1af02" />
+
+
 
 **12.4.4 Cross Asset Carry Trades**
 
@@ -2361,16 +2573,19 @@ Funding rate arbitrage supports cross asset carry structures.
 Long and short legs may reference different underlying assets.
 
 Examples
-Long silver perps and short BTC perps
-Long equity index RWAs and short ETH perps
+- Long silver perps and short BTC perps
+- Long equity index RWAs and short ETH perps
+- Long low funding assets hedged with high funding crypto assets
 
-Directional neutrality is not implied.
+In these cases:
+- Directional neutrality is not implied
+- Basis and correlation risk are explicit
+- PnL includes funding differentials and price movement
 
-Basis and correlation risk are explicit.
+Cross asset strategies are fully user defined.
+No correlation assumptions or hedging logic are inferred by the system.
 
-PnL includes funding differentials and price movement.
 
-No correlation assumptions or hedging logic are inferred.
 
 **12.4.5 Margin and Quote Asset Handling**
 
@@ -2380,25 +2595,36 @@ Margin assets may differ across legs.
 
 Margin sufficiency is evaluated independently per venue.
 
-Internal margin sourcing is subject to permissions and settlement constraints.
+Internal margin sourcing and transfers are subject to account permissions and settlement constraints.
+
+
 
 **12.4.6 Leverage Compatibility Enforcement**
 
 User specified leverage is treated as a strict constraint.
 
-Venue specific leverage cannot be overridden.
+Venue specific markets explicitly control leverage which cannot be overridden. 
 
-Leverage availability may differ between legs.
+Leverage opportunity may be different between legs of a trade due to the underlying market constraints.
+
+
 
 **12.4.7 Funding Attribution and PnL**
 
-Funding accrues per venue and per market.
+Funding is accrued per venue and per market.
 
 Net funding PnL is calculated across all legs.
 
-Price PnL reflects asset specific price movement and basis risk.
+Price PnL reflects asset specific price movement and cross asset basis risk.
 
 Funding and price PnL are reported separately.
+
+
+
+
+
+
+
 
 
 
