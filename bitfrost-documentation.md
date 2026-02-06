@@ -2001,13 +2001,433 @@ This section is used to confirm strategy health and operational continuity.
 
 ---
 
-## 12. MORE
 
-### 12.1 Transaction Explorer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Below is **Section 12 RWAs**, formatted to match your existing doc style.
+
+Headings are bold only
+No separators
+Clean copy paste
+Numbered consistently
+No dashes used anywhere
+
+---
+
+**12. RWAs**
+
+**12.1 Exchanges**
+
+Bitfrost provides access to real world asset perpetual markets through Hyperliquid HIP3 venues.
+
+**12.1.1 RWA Market Overview**
+
+These markets extend perpetual trading beyond crypto native assets to include commodities, equities, equity indices, FX pairs, and thematic baskets.
+
+All RWA markets are accessed through the same execution, risk, and portfolio infrastructure used for crypto perpetuals.
+
+Markets are venue specific.
+
+Each venue defines its own asset universe, margin denomination, and maximum leverage.
+
+Supported HIP3 venues include
+XYZ
+FLX
+KM
+VNTL
+CASH
+HYNA
+
+RWA instruments are margined and quoted in stable assets specific to each venue such as USDC, USDH, USDT, or USDE.
+
+Leverage limits are enforced at the market level and vary by asset type and venue.
+
+Execution across RWA markets supports the full Bitfrost feature set including
+Multi venue aggregation
+Advanced execution strategies
+Market making and inventory management
+Vault based capital deployment
+Multi strategy coordination and monitoring
+Funding rate arbitrage and carry trade strategies
+
+Risk management is applied consistently across RWA and crypto markets.
+
+Margin usage, exposure, and PnL are tracked at both the strategy level and the account level.
+
+**12.1.2 Venue Documentation**
+
+**XYZ**
+Documentation [https://docs.trade.xyz/xyz-perps-specification/equity-perpetuals](https://docs.trade.xyz/xyz-perps-specification/equity-perpetuals)
+Supported markets as defined by the venue
+
+**FLX**
+Documentation [https://usefelix.gitbook.io/perps](https://usefelix.gitbook.io/perps)
+Supported markets as defined by the venue
+
+**VNTL**
+Documentation [https://docs.ventuals.com/overview/markets](https://docs.ventuals.com/overview/markets)
+Supported assets as defined by the venue
+
+**HYNA**
+Documentation [https://docs.hyena.trade](https://docs.hyena.trade)
+Supported assets as defined by the venue
+
+**KM**
+Documentation [https://docs.markets.xyz](https://docs.markets.xyz)
+Supported assets as defined by the venue
+
+**CASH**
+Documentation [https://docs.dreamcash.xyz](https://docs.dreamcash.xyz)
+Supported assets as defined by the venue
+
+**12.2 Aggregator**
+
+**12.2.1 Overview**
+
+The Aggregator enables execution of RWAs across multiple Hyperliquid HIP3 venues through a single execution intent.
+
+Execution is coordinated at the underlying asset level while enforcing venue specific rules for margin, leverage, funding, and settlement.
+
+RWA markets participate in the same execution, portfolio, and audit framework as all other markets.
+
+Each venue maintains its own market listings, margin denomination, leverage schedule, and funding mechanics.
+
+For an understanding of Aggregator functionality, refer to the Aggregator section.
+
+**12.2.2 Asset Selection**
+
+RWA execution begins with explicit selection of an underlying asset.
+
+An asset represents the economic exposure and is independent of venue, quote asset, or margin denomination.
+
+Once an asset is selected, the Aggregator identifies all markets referencing that asset across supported venues.
+
+Asset selection defines the universe of candidate markets but does not determine execution scope.
+
+**12.2.3 Venue Selection**
+
+Execution scope is defined by explicit venue selection.
+
+Only venues selected by the user are eligible for execution.
+
+Each selected venue represents an eligible execution surface for the underlying asset.
+
+A single Aggregator execution may span multiple venues simultaneously.
+
+Venue selection defines
+Eligible markets
+Eligible leverage ranges
+Eligible margin assets
+Eligible liquidity pools
+
+Venues that do not satisfy user defined execution constraints are excluded from execution.
+
+**12.2.4 Underlying Asset Normalization**
+
+Execution intent is defined at the underlying asset level.
+
+Markets referencing the same underlying asset may participate in a single execution intent even when quote or margin assets differ.
+
+Example
+Silver quoted in USDC on one venue
+Silver quoted in USDH on another venue
+
+Both markets may be included within the same Aggregator execution scope when they reference the same underlying asset.
+
+Settlement, margin usage, and funding remain attributed to each venue.
+
+Execution intent is preserved at the asset level while accounting remains venue specific.
+
+**12.2.5 Quote Asset Independence**
+
+Markets referencing the same underlying asset may be quoted and margined using different assets such as USDC, USDH, USDT, or USDE.
+
+Quote and margin differences do not affect asset eligibility.
+
+Funding, settlement, and margin accounting remain venue specific.
+
+**12.2.6 Margin Determination and Availability**
+
+Margin denomination is determined by venue selection.
+
+By selecting a venue, the margin asset required by that venue is selected.
+
+Margin availability is evaluated independently per venue prior to order submission.
+
+The Aggregator may source margin across venues subject to account permissions, available balances, and internal settlement constraints.
+
+**12.2.7 Leverage Compatibility Enforcement**
+
+Maximum leverage is enforced at the venue and market level.
+
+When a user specifies a target leverage
+The Aggregator evaluates leverage limits across all selected venues
+Venues that do not support the specified leverage are excluded from execution
+Remaining venues participate normally
+
+Execution is never resized to satisfy an incompatible venue.
+
+**12.2.8 Execution Scope Resolution**
+
+Final execution scope is resolved by intersecting
+Selected underlying asset
+Selected venues
+User specified leverage constraints
+Venue level market eligibility
+Venue level margin availability
+
+Only markets within this resolved scope receive execution.
+
+No implicit substitutions or relaxations are applied.
+
+**12.2.9 Portfolio and Accounting Integration**
+
+RWA positions executed through the Aggregator are tracked at both the asset level and the venue level.
+
+Asset level tracking aggregates
+Net exposure by underlying asset
+PnL contribution by underlying asset
+Directional exposure and bias
+
+Venue level accounting preserves
+Margin denomination and usage
+Funding attribution
+Leverage attribution
+Settlement and execution provenance
+
+This enables a unified asset view while maintaining venue accurate accounting and auditability.
+
+**12.3 Market Maker**
+
+**12.3.1 Overview**
+
+This section defines behavior specific to market making on real world asset perpetual markets.
+
+General market making mechanics, parameters, and lifecycle are defined in the Market Making section.
+
+**12.3.2 RWA Strategy Coverage**
+
+RWA markets are supported across all market making strategy types available on the platform.
+
+This includes
+Advanced market making strategies
+Vault based market making strategies
+Multi strategy market making deployments
+
+RWA support does not introduce a separate strategy class.
+
+RWA markets participate in the same strategy frameworks, parameter models, and risk controls as other markets.
+
+**12.3.3 Strategy Type Consistency**
+
+All market making strategy types operate on RWA markets using the same configuration structure.
+
+Support includes
+Single market deployments
+Multi strategy portfolios
+Vault deployed strategies with external capital participation
+
+RWA specific behavior is expressed through market characteristics such as leverage limits, funding dynamics, and liquidity profiles.
+
+**12.3.4 Exchange Selection**
+
+RWA market making requires explicit exchange selection.
+
+Only one HIP3 venue may be selected per market making deployment.
+
+The selected exchange defines
+Available RWA markets
+Margin denomination
+Funding mechanics
+Leverage schedules by market
+
+Changing the exchange requires redeployment.
+
+Providing liquidity across multiple venues requires separate strategies.
+
+**12.3.5 Asset Selection and Leverage Determination**
+
+Asset selection is scoped to the selected exchange.
+
+Each RWA asset corresponds to a specific perpetual market listed on that exchange.
+
+Leverage is determined at the asset level and fixed by the market.
+
+No leverage normalization or override is applied.
+
+Examples
+xyz SILVER PERP USDC supports up to 20x
+km SILVER PERP USDC supports up to 20x
+vntl MAG7 PERP USDH supports up to 15x
+
+**12.3.6 Execution Implications**
+
+Order sizing, inventory limits, and risk thresholds are constrained by asset level leverage.
+
+Constraints are enforced prior to order placement and continuously during execution.
+
+**12.3.7 Margin and Inventory Isolation**
+
+Margin denomination is determined by venue selection.
+
+Each RWA market making strategy maintains isolated margin and inventory on its selected venue.
+
+Inventory risk is venue specific.
+
+**12.3.8 Liquidity Characteristics**
+
+RWA order books typically exhibit lower depth, wider spreads, and less consistent liquidity than crypto native markets.
+
+Liquidity may be intermittent and asymmetric.
+
+These characteristics must be handled through strategy configuration.
+
+**12.3.9 Inventory Persistence**
+
+Inventory may persist for longer durations due to lower turnover.
+
+Directional exposure may remain open for extended periods.
+
+Inventory skew and exposure caps are critical.
+
+There is no implicit hedging or cross venue offsetting.
+
+**12.3.10 Funding Attribution**
+
+Funding is defined per venue and per RWA market.
+
+Funding impacts inventory carry cost and realized PnL.
+
+Funding does not affect quoting behavior.
+
+**12.3.11 Event Sensitivity**
+
+RWA markets are sensitive to market hours, macro events, and venue specific liquidity changes.
+
+Strategies are not automatically paused.
+
+Risk management remains the responsibility of strategy configuration.
+
+**12.4 Funding Rate Arbitrage**
+
+**12.4.1 Overview**
+
+General funding rate arbitrage mechanics, parameters, and lifecycle are defined in the Funding Rate Arbitrage section.
+
+**12.4.2 Strategy Scope**
+
+Funding rate arbitrage strategies may be constructed across
+Real world asset markets
+Crypto native asset markets
+Mixed RWA and crypto combinations
+
+Strategies are not restricted to a single asset class.
+
+Directional exposure is user defined.
+
+**12.4.3 Asset Selection**
+
+Execution begins with explicit asset selection.
+
+Assets may include
+Real world assets
+Crypto assets
+Indices
+FX pairs
+Cross asset combinations
+
+Asset selection defines eligible instruments but does not require identical assets on each leg.
+
+**12.4.4 Cross Asset Carry Trades**
+
+Funding rate arbitrage supports cross asset carry structures.
+
+Long and short legs may reference different underlying assets.
+
+Examples
+Long silver perps and short BTC perps
+Long equity index RWAs and short ETH perps
+
+Directional neutrality is not implied.
+
+Basis and correlation risk are explicit.
+
+PnL includes funding differentials and price movement.
+
+No correlation assumptions or hedging logic are inferred.
+
+**12.4.5 Margin and Quote Asset Handling**
+
+Margin denomination is determined by venue selection.
+
+Margin assets may differ across legs.
+
+Margin sufficiency is evaluated independently per venue.
+
+Internal margin sourcing is subject to permissions and settlement constraints.
+
+**12.4.6 Leverage Compatibility Enforcement**
+
+User specified leverage is treated as a strict constraint.
+
+Venue specific leverage cannot be overridden.
+
+Leverage availability may differ between legs.
+
+**12.4.7 Funding Attribution and PnL**
+
+Funding accrues per venue and per market.
+
+Net funding PnL is calculated across all legs.
+
+Price PnL reflects asset specific price movement and basis risk.
+
+Funding and price PnL are reported separately.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+## 13. MORE
+
+### 13.1 Transaction Explorer
 
 The Transaction Explorer provides a real-time, system-wide view of all on-chain and off-chain actions processed through Bitfrost Prime.
 
-#### 12.1.1 Overview
+#### 13.1.1 Overview
 
 The explorer streams live transaction activity as it is processed and settled.
 
@@ -2020,7 +2440,7 @@ The explorer supports operational monitoring, reconciliation, and post-trade ana
 <img width="878" height="463" alt="Screenshot 2026-01-29 at 12 33 29" src="https://github.com/user-attachments/assets/ab45f4df-8962-4172-96f2-272c572d661d" />
 
 
-#### 12.1.2 Search and Filtering
+#### 13.1.2 Search and Filtering
 
 The search interface allows querying by transaction hash, action type, or account identifier.
 
@@ -2028,7 +2448,7 @@ Status filters enable isolation of successful, pending, or failed transactions.
 
 This supports rapid identification of execution issues, settlement delays, or anomalous behaviour.
 
-#### 12.1.3 Transaction Records
+#### 13.1.3 Transaction Records
 
 Each transaction entry includes:
 
@@ -2039,7 +2459,7 @@ Each transaction entry includes:
 - **Account**: The originating account or sub-account responsible for the action
 - **Status**: The current execution state of the transaction
 
-#### 12.1.4 Transaction Status States
+#### 13.1.4 Transaction Status States
 
 Transactions may exist in one of the following states:
 
